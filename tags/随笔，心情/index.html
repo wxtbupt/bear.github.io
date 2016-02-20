@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Day 1 | bear_Little_bear&#39;s blog</title>
+  <title>Tag: 随笔，心情 | bear_Little_bear&#39;s blog</title>
   <meta name="description" content="Tongether" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -150,7 +150,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">Day 1</a></li>
+                        <li id="navbar-title"><a href="#">undefined</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -169,72 +169,49 @@
 
 
 <!-- -->
-<!--<body class="post-template">-->
+<!--<body class="home-template">-->
 <!---->
   
-
 <main class="content" role="main">
-    <article class="post" >
-    <span class="post-meta">
-                  <div class="tag-tile">
-                      
-                      
-                      <a data-pjax href='/tags/Day-1/' style='color:#D5D5D5'>Day 1</a>
-                      
-                      
-                  </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">Day 1</h1>
 
-                    <div class="post-meta">
-                        Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2016-02-14T14:46:49.000Z"
-                              itemprop="datePublished">2016-02-14</time>
-                    </div>
-    </span>
+    
+    <article class="post">
 
-        <section class="post-content">
-            <p>## </p>
-<ol>
-<li>数组从0开始，所有scanf n个数到数组中 for(i=0; i&lt;n; i++)，排序的时候也要注意是从0 开始，n个数的数组是从0~n-1。</li>
-<li><p>测试案例有多组（输入数据有多组，预先并不知道具体有多少组）<br>while(scanf(balabalal)!=EOF)<br>{<br>/<em>对于每组数据都进行的操作</em>/<br>printf(“\n”);//每个测试案例后都换行，格式要求<br>}<br>若输入为字符串而程序采用gets()的方法读入，相同功能的循环判断语句为while(gets())</p>
-</li>
-<li><p>排序<br>a)    冒泡<br>for (int i = 0; i &lt; n; i++)<br>  {</p>
-<pre><code>for (int j = 0; j &lt; n - i - 1; j++)
-{
-    if (a[j]&gt;a[j + 1])
-    {
-        int p = a[j];
-        a[j] = a[j+1];
-        a[j + 1] = p;
+        <header class="post-header">
+            <div class="tag-tile">
+                
+                
+                <a data-pjax href='/tags/随笔，心情/'>随笔，心情</a>
+                
+                
+                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
+            </div>
+            <h1 class="post-title"><a data-pjax href="/2016/02/21/2/">嘿嘿~</a>
+            </h1>
 
-    }
-}
-</code></pre><p>  }<br>b)    qsort()（升序版）<br>#include<stdlib.h><br>main函数之前写cmp函数<br>int cmp(const void <em>a, const void </em>b)<br>{<br>return(<em>(int </em>)a-<em>(int </em>)b);<br>}<br>main中调用qsort(a,n,sizeof(int),cmp);//a是数组的名字，n是个数，sizeof(int)，调用cmp<br><em>对int类型<br>int num[100];<br>int cmp ( const void </em>a , const void <em>b )<br>{<br>return </em>(int <em>)a - </em>(int <em>)b;<br>}<br>qsort(num,100,sizeof(num[0]),cmp);
-</em>对char类型<br>char word[100];<br>Sample:<br>int cmp( const void <em>a , const void </em>b )<br>{<br>return <em>(char </em>)a - <em>(int </em>)b;<br>}<br>qsort(word,100,sizeof(word[0]),cmp);<br><em>对double类型<br>double in[100];<br>int cmp( const void </em>a , const void <em>b )<br>{<br>return </em>(double <em>)a &gt; </em>(double <em>)b ? 1 : -1;<br>}<br>qsort(in,100,sizeof(in[0]),cmp)；
-</em>对字符串<br>struct In<br>{<br>int data;<br>char str[100];<br>}s[100];<br>//按照结构体中字符串str的字典顺序排序<br>int cmp ( const void <em>a , const void </em>b )<br>{<br>return strcmp( ((In <em>)a)-&gt;str , ((In </em>)b)-&gt;str );<br>}<br>qsort(s,100,sizeof(s[0]),cmp);<br><em>对结构体<br>struct In<br>{<br>int x;<br>int y;<br>}s[100];<br>//按照x从小到大排序，当x相等时按照y从大到小排序<br>int cmp( const void </em>a , const void <em>b )<br>{<br>struct In </em>c = (In <em>)a;<br>struct In </em>d = (In *)b;<br>if(c-&gt;x != d-&gt;x) return c-&gt;x - d-&gt;x;<br>else return d-&gt;y - c-&gt;y;<br>}<br>qsort(s,100,sizeof(s[0]),cmp);<br>c)    sort() （升序版）<br>include<algorithm><br>using namespace std;//重要！！！<br>bool cmp (int x, int y) { return x<y; }="" main中引用sort(a,a+n,cmp);="" sort(排序起始地址，排序结束地址，比较函数)="" sort()也可以排序double、char="" sort是个好用的函数啊！需要对数组t的第0到len-1的元素排序，就写sort(t,t+len)="" sort(a,a+n)默认将n个数从小到大，升序排列="" 若想要降序，则加一个cmp函数，sort函数变为sort(a,a+n,cmp)="" bool="" cmp(int="" a,int="" b)="" {="" return="" a="">b;<br>}</y;></algorithm></stdlib.h></p>
-</li>
-<li>strcmp()比较两个字符串，若str1==str2，则返回0；若str1&gt;str2，则返回正数；若str1&lt;str2，则返回负数。</li>
-</ol>
+            <div class="post-meta">
+                Post on<span class="fa fa-clock-o"></span>
+                <time datetime="2016-02-20T17:34:25.000Z"
+                      itemprop="datePublished">2016-02-21</time>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                600天啦~好快，都600天了任先森还是一样没记着还是一样一脸懵懂，简直气人还是一样好惊讶，居然已经鬼混了这么久还是一样破坏气氛的说，搞完代码就睡觉吧，明天早点起床还是一样没情调没好听的话get不到我的点唉人僧啊就是这么艰难*我是无奈的分割线**拿了驾照，安心刷题准备复试吧但愿不用调剂但愿安全通过复试但愿跟着nice的老师但愿……
+晚安，亲爱的人啊
 
+                
+            </p>
+            
         </section>
-        <hr/>
-        <nav class="pagination" style="width:auto" role="pagination">
-            
-            <a data-pjax class="newer-posts" href="/2016/02/21/2/">← Prev Post</a>
-            
-            <a class="share-button" data-original-title title>Share this Post</a>
-            
-            <a data-pjax class="older-posts" href="/2016/02/05/my-new-post/">Next Post →</a>
-            
-        </nav>
-        <br/>
-        <br/>
-        <section id="comment">
-            <div id="comment-box"></div>
-        </section>
-
-
     </article>
+    
+    <nav class="pagination" role="pagination">
+        
+        <span class="page-number">Page 1 of 1</span>
+        
+    </nav>
 </main>
 
 
